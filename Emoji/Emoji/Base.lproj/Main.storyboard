@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IkU-Hb-9iG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Emoji dictionary-->
+        <scene sceneID="glT-EG-GET">
+            <objects>
+                <tableViewController id="mnv-9u-BSp" customClass="TableViewController" customModule="Emoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KOH-c3-59z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="pyQ-Kk-v01">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pyQ-Kk-v01" id="AFJ-hJ-eev">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mnv-9u-BSp" id="MWH-mJ-FXf"/>
+                            <outlet property="delegate" destination="mnv-9u-BSp" id="5ZC-WH-v3p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Emoji dictionary" id="do0-U9-haK"/>
+                    <connections>
+                        <segue destination="Rgy-I0-UPU" kind="show" identifier="Definition" id="Bda-dG-w6R"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0Q-Ub-5gu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="96"/>
+        </scene>
+        <!--Emoji View Controller-->
+        <scene sceneID="Mar-pT-R2C">
+            <objects>
+                <viewController id="Rgy-I0-UPU" customClass="EmojiViewController" customModule="Emoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VLk-E2-uwm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN4-eH-SDr">
+                                <rect key="frame" x="180" y="138" width="54" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label sdsd sds sd sdsd sd sdsdsd sdsdsd sdsds sdsds dsds sddsd sdsds dsds" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9f-a8-Hcn">
+                                <rect key="frame" x="20" y="195" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="toc-tD-FQF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b9f-a8-Hcn" firstAttribute="centerX" secondItem="VLk-E2-uwm" secondAttribute="centerX" id="1ka-cD-T6f"/>
+                            <constraint firstItem="b9f-a8-Hcn" firstAttribute="top" secondItem="toc-tD-FQF" secondAttribute="top" constant="107" id="B0O-2a-62v"/>
+                            <constraint firstItem="fN4-eH-SDr" firstAttribute="centerX" secondItem="VLk-E2-uwm" secondAttribute="centerX" id="eLy-Dj-VAW"/>
+                            <constraint firstItem="b9f-a8-Hcn" firstAttribute="leading" secondItem="toc-tD-FQF" secondAttribute="leading" constant="20" id="tIR-CT-YFj"/>
+                            <constraint firstItem="fN4-eH-SDr" firstAttribute="top" secondItem="toc-tD-FQF" secondAttribute="top" constant="50" id="xe7-cE-OBx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FiD-UN-c5l"/>
+                    <connections>
+                        <outlet property="EmojiDefinitionLabel" destination="b9f-a8-Hcn" id="eUH-O4-xYD"/>
+                        <outlet property="EmojiLabel" destination="fN4-eH-SDr" id="8oL-YN-pu2"/>
+                        <outlet property="emojiDefinitionLabel" destination="b9f-a8-Hcn" id="dSk-c2-Dgl"/>
+                        <outlet property="emojiLabel" destination="fN4-eH-SDr" id="7MV-3L-cCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6HY-OR-zgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291" y="96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fHm-Ow-5Jh">
+            <objects>
+                <navigationController id="IkU-Hb-9iG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OuE-jg-FJy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mnv-9u-BSp" kind="relationship" relationship="rootViewController" id="pdy-Zb-ZeH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kn5-4A-fND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
